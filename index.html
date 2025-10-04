@@ -9,15 +9,41 @@
   </head>
   <body>
     <div class="container">
-      <h1>Dodge Blocks</h1>
-      <p class="score">Score: <span id="score">0</span></p>
-      <canvas id="game" width="480" height="640" aria-label="Game canvas"></canvas>
-      <div class="controls">
-        <button id="left">◀</button>
-        <button id="pause">Pause</button>
-        <button id="right">▶</button>
+      <header class="topbar">
+        <h1 class="logo">DODGE<span>•</span>BLOCKS</h1>
+        <div class="hud">
+          <div class="hud-item">Score <strong id="score">0</strong></div>
+          <div class="hud-item">Best <strong id="best">0</strong></div>
+          <button id="mute" class="hud-mute" aria-pressed="false" title="Mute">🔊</button>
+          <div class="hud-item volume-control">Vol <input id="volume" type="range" min="0" max="100" value="80" /></div>
+        </div>
+      </header>
+
+      <div class="stage">
+        <canvas id="bg" class="bg-canvas" width="480" height="640" aria-hidden="true"></canvas>
+        <canvas id="game" width="480" height="640" aria-label="Game canvas"></canvas>
+        <div id="vfx" class="vfx"></div>
       </div>
-      <p class="instructions">Use arrow keys or the buttons to move. Avoid the falling blocks. The game gets faster over time.</p>
+
+      <div class="controls">
+        <button id="left" class="neon">◀</button>
+        <button id="pause" class="neon">Start</button>
+        <button id="right" class="neon">▶</button>
+      </div>
+
+      <div class="instructions">Use arrow keys or the buttons to move. Avoid the falling blocks. The game speeds up over time.</div>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h2>Welcome</h2>
+          <p>Move to dodge the falling blocks. Survive as long as you can.</p>
+          <div class="panel-actions">
+            <button id="startBtn" class="primary">Play</button>
+            <button id="github" class="ghost">View on GitHub</button>
+          </div>
+        </div>
+      </div>
+
       <footer>Made with vanilla JS • Refresh to restart</footer>
     </div>
     <script src="game.js"></script>
