@@ -4,7 +4,7 @@ This is a tiny vanilla JavaScript game where you move a player left and right to
 
 How to run
 
-1. Open a terminal in this folder: `c:/Users/Admin/Desktop/web-game`
+1. Open a terminal in your downloads folder/the location or path you downloaded my files .
 2. Install dependencies: `npm install`
 3. Start the dev server: `npm run start`
 
