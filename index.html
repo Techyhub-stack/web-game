@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dodge Blocks — Web Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dodge Blocks</h1>
+      <p class="score">Score: <span id="score">0</span></p>
+      <canvas id="game" width="480" height="640" aria-label="Game canvas"></canvas>
+      <div class="controls">
+        <button id="left">◀</button>
+        <button id="pause">Pause</button>
+        <button id="right">▶</button>
+      </div>
+      <p class="instructions">Use arrow keys or the buttons to move. Avoid the falling blocks. The game gets faster over time.</p>
+      <footer>Made with vanilla JS • Refresh to restart</footer>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
